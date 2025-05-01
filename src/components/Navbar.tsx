@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
-
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
   visible: {
