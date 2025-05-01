@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import image from "../assets/topbar.png";
+
+
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -58,15 +59,7 @@ const sidebarItemVariants = {
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
-  const navContent = [
-    "Home",
-    "About",
-    "Activities",
-    "Services",
-    "Programmes",
-    "Resources",
-    "Engagement",
-  ];
+ 
   const sidebarContent = [
     "Sitemap",
     "Contact Us",
@@ -90,13 +83,18 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.nav
-      variants={navVariants}
-      initial="hidden"
-      animate="visible"
-      className="bg-black text-white px-6 py-4 shadow-md relative min-h-screen"
-    >
-      <div className="flex items-center justify-center pt-10 font-medium relative">
+  variants={navVariants}
+  initial="hidden"
+  animate="visible"
+  className="absolute top-0 left-0 w-full   text-white px-6 py-4  z-10"
+>
+
+      <div className="flex items-center justify-center pt-10  relative">
         {/* Desktop Nav with Animation */}
+        <div>
+        <h1 className="font-bold text-[50px]">ISRO</h1>
+      </div>
+      
         <motion.div
           className="hidden md:flex space-x-10 justify-center items-center"
           variants={navVariants}
@@ -116,7 +114,7 @@ const Navbar: React.FC = () => {
 
               {subItems.length > 0 && (
                 <motion.div
-                  className="absolute top-8 left-0 w-78 bg-white text-black rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 transition-all duration-300 z-20 pointer-events-none group-hover:pointer-events-auto"
+                  className="absolute top-8 left-0 w-78 bg-black text-white rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 transition-all duration-300 z-20 pointer-events-none group-hover:pointer-events-auto"
                 >
                   {subItems.map((sub, index) => (
                     <Link
@@ -170,7 +168,7 @@ const Navbar: React.FC = () => {
               >
                 <Link
                   to={`/${text.toLowerCase()}`}
-                  className="text-white text-right font-medium text-center p-2 border-b border-zinc-800 transition duration-300"
+                  className="text-white text-right  text-center p-2 border-b border-zinc-800 transition duration-300"
                   onClick={() => setVisible(false)}
                 >
                   {text}

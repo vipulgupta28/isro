@@ -7,9 +7,9 @@ import AppRoutes from "./routes/AppRoutes";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="bg-black text-white ">
+    
         <AppRoutes />
-      </div>
+    
     </BrowserRouter>
   );
 };

@@ -6,7 +6,7 @@ const AppRoutes = () =>{
         <>
         <Routes>
         <Route path='/' element={<LandingPage/>}/>
-    </Routes>
+        </Routes>
         </>
     )
     
