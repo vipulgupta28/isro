@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import image from "../assets/topbar.png";
+
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
