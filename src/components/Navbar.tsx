@@ -58,15 +58,7 @@ const sidebarItemVariants = {
 const Navbar: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
-  const navContent = [
-    "Home",
-    "About",
-    "Activities",
-    "Services",
-    "Programmes",
-    "Resources",
-    "Engagement",
-  ];
+
   const sidebarContent = [
     "Sitemap",
     "Contact Us",
