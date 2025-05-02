@@ -1,136 +1,129 @@
-import background from "../assets/rc-bellergy-6X6SKcj8gfY-unsplash.jpg";
+import React from "react";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
+import image from "../assets/nasa-jlV2k_Fx0fc-unsplash.jpg";
 
 const Hero: React.FC = () => {
-  // Animation variants for staggered entrance
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, x: 100, rotate: 5 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      rotate: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 1.2,
-      },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 20,
-        duration: 1.5,
-      },
-    },
-    hover: {
-      scale: 1.1,
-      boxShadow: "0px 0px 15px rgba(255, 255, 255, 0.5)",
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
-
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
-      <motion.img
-        src={background}
-        alt="ISRO Background"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        initial={{ scale: 1.2 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-      />
+    <div className="relative min-h-screen bg-black text-white overflow-hidden">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-black" />
+      {/* Animated stars */}
 
-      {/* Gradient Overlay for Readability */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/50 to-transparent z-5" />
+  <div className="stars" />
+  <div className="twinkling" />
 
-      {/* Right-aligned content */}
-      <motion.div
-        className="relative z-10 flex flex-col items-end justify-center h-full pr-12 md:pr-20"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.h1
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="text-white text-4xl md:text-6xl font-bold text-right bg-black/30 px-6 py-4 rounded-lg"
-        >
-          INDIAN SPACE <br /> RESEARCH ORGANIZATION
-        </motion.h1>
 
-        <motion.div
-          variants={containerVariants}
-          className="mt-8 flex gap-6"
-        >
-          <motion.button
-            variants={buttonVariants}
-            whileHover="hover"
-            className="text-white text-lg px-8 py-3 bg-white/10 border border-white/30 rounded-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300"
-          >
-            Launches
-          </motion.button>
-          <motion.button
-            variants={buttonVariants}
-            whileHover="hover"
-            className="text-white text-lg px-8 py-3 bg-white/10 border border-white/30 rounded-lg backdrop-blur-md hover:bg-white/20 transition-all duration-300"
-          >
-            Who We Are
-          </motion.button>
-        </motion.div>
-      </motion.div>
+      {/* Animated stars */}
+      <div className="absolute inset-0">
+        <div className="stars" />
+        <div className="twinkling" />
+      </div>
 
-      {/* Subtle Floating Particles Effect */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-full pointer-events-none z-5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ duration: 2, delay: 1 }}
-      >
-        {[...Array(10)].map((_, i) => (
+      {/* Main content container */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left content */}
           <motion.div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              width: Math.random() * 4 + 2,
-              height: Math.random() * 4 + 2,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: Math.random() * 5 + 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="space-y-2"
+            >
+              <div className="inline-block">
+                <span className="bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full">
+                  Exploring New Frontiers
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                India's Gateway to
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"> Space</span>
+              </h1>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="mt-6 text-gray-300 text-lg max-w-lg"
+            >
+              From launching satellites to exploring Mars, ISRO continues to push the boundaries of space exploration and technological innovation.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mt-8 flex gap-4"
+            >
+              <button className="group relative px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                Discover Missions
+                <motion.span
+                  className="inline-block ml-2"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                >
+                  <FiArrowRight className="inline" />
+                </motion.span>
+              </button>
+              <button className="px-6 py-3 border border-white/20 hover:border-white/40 rounded-lg font-medium transition-all duration-300 backdrop-blur-sm hover:bg-white/10">
+                Learn More
+              </button>
+            </motion.div>
+          </motion.div>
+
+          {/* Right content - Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative hidden md:block"
+          >
+            <div className="relative">
+              <motion.div
+                animate={{
+                  rotate: [0, 5, -5, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <img
+                  src={image}
+                  alt="ISRO Mission"
+                  className="rounded-2xl shadow-2xl shadow-blue-500/20"
+                />
+              </motion.div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -inset-4 border border-white/10 rounded-2xl -z-10" />
+              <div className="absolute -inset-8 border border-white/5 rounded-2xl -z-20" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          delay: 1,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+      >
+        <div className="w-1 h-12 rounded-full bg-gradient-to-b from-white/20 to-transparent" />
+        <span className="mt-2 text-sm font-bold text-gray-400">Scroll to explore</span>
       </motion.div>
     </div>
   );
