@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
+
 import image from "../assets/nasa-jlV2k_Fx0fc-unsplash.jpg";
 
 const Hero: React.FC = () => {
