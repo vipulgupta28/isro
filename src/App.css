@@ -1,35 +1,8 @@
-/* Twinkling Stars Background */
-
-.stars,
-.twinkling {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background-repeat: repeat;
-  z-index: 0;
-  pointer-events: none;
+/* global.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
-
-.stars {
-  background: transparent url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='white' /%3E%3C/svg%3E") repeat;
-  animation: moveStars 100s linear infinite;
-  opacity: 0.3;
-}
-
-.twinkling {
-  background: transparent url("data:image/svg+xml,%3Csvg width='2' height='2' viewBox='0 0 2 2' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='white' /%3E%3C/svg%3E") repeat;
-  animation: twinkle 4s ease-in-out infinite;
-  opacity: 0.4;
-}
-
-@keyframes moveStars {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.1; }
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }

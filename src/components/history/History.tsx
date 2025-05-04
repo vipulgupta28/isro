@@ -1,6 +1,9 @@
 import HistoryTimeline from './HistoryTimeline';
 import { Rocket, Star } from 'lucide-react';
 
+import InfiniteScrollSection from '../launches/InfiniteScrollSection';
+import { majorLaunches } from './HistoryData';
+
 const LaunchesSection = () => {
   // Sample data for launch cards
   const launches = [
@@ -101,9 +104,10 @@ const History = () => {
         </div>
 
         {/* Launches section */}
-        <div className="animate-slide-up">
-          <LaunchesSection />
-        </div>
+        <div className="min-h-screen bg-black bg-stars font-space text-white relative">
+      <div className="grain" />
+      <InfiniteScrollSection initialLaunches={majorLaunches.slice(0, 3)} />
+    </div>
       </div>
 
       {/* Global animations */}

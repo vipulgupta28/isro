@@ -187,34 +187,37 @@ const Navbar = () => {
           >
             {Object.entries(dropdownContent).map(([title, subItems], i) => (
               <motion.div
-                key={i}
-                className="relative group"
-                variants={itemVariants}
-                onMouseEnter={() => toggleDropdown(title)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <button
-                  className="transition p-2 hover:cursor-pointer rounded-lg font-orbitron text-sm font-medium flex items-center gap-1 hover:text-cyan-300 glow-hover"
-                  onClick={() => toggleDropdown(title)}
-                >
-                  {title}
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      openDropdown === title ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+              key={i}
+              className="relative group"
+              variants={itemVariants}
+            >
+            
+            <button
+  className="transition p-2 hover:cursor-pointer rounded-lg font-orbitron text-sm font-medium flex items-center gap-1 hover:text-cyan-300 glow-hover"
+  onClick={() => toggleDropdown(title)}
+>
+  {title}
+  <ChevronDown
+    className={`w-4 h-4 transition-transform ${
+      openDropdown === title ? "rotate-180" : ""
+    }`}
+  />
+</button>
+
 
                 {subItems.length > 0 && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{
-                      opacity: openDropdown === title ? 1 : 0,
-                      y: openDropdown === title ? 0 : 10,
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute top-10 left-0 w-80 bg-black text-white rounded-lg shadow-xl backdrop-blur-md border border-white z-20"
-                  >
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{
+                    opacity: openDropdown === title ? 1 : 0,
+                    y: openDropdown === title ? 0 : 10,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className={`absolute top-10 left-0 w-80 bg-black text-white rounded-lg shadow-xl backdrop-blur-md border border-white z-20 transition-all duration-300 ${
+                    openDropdown === title ? "pointer-events-auto" : "pointer-events-none"
+                  }`}
+                >
+                
                     {subItems.map((sub, index) => (
                       <Link
                         key={index}
