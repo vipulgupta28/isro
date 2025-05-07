@@ -22,6 +22,7 @@ export interface SpaceLaunch {
     label: string;
     value: string;
   }[];
+  
 }
 
 // Icons mapping for type safety

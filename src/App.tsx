@@ -6,7 +6,7 @@ import SpaceParticles from "./components/Footer/SpaceParticles";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="relative min-h-screen overflow-hidden">
+      <div className="relative min-h-screen bg-black overflow-hidden">
         <SpaceParticles />
         <AppRoutes />
       </div>
