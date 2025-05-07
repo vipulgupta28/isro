@@ -12,7 +12,7 @@ interface LaunchCardProps {
 const LaunchCard: React.FC<LaunchCardProps> = ({ launch, animationDelay, index }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(cardRef, { threshold: 0.1, once: true });
+  const isInView = useInView(cardRef, { threshold: 0.1 });
   const [imageLoaded, setImageLoaded] = useState(false);
   
   const isEven = index % 2 === 0;

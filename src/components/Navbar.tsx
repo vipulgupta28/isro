@@ -172,7 +172,7 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="w-full  top-0 text-white px-6 py-4 z-50 backdrop bg-black backdrop-blur-md"
+      className="w-full relative  top-0 text-white px-6 py-4 z-50 backdrop bg-black backdrop-blur-md"
     >
       <SpaceParticles/>
       <div className="flex items-center justify-between px-4 md:px-10 relative w-full">
@@ -215,7 +215,7 @@ const Navbar = () => {
                     y: openDropdown === title ? 0 : 10,
                   }}
                   transition={{ duration: 0.3 }}
-                  className={`absolute top-10 left-0 w-80 bg-black text-white rounded-lg shadow-xl backdrop-blur-md border border-white z-20 transition-all duration-300 ${
+                  className={`absolute top-10 left-0 w-80 bg-black text-white rounded-lg shadow-xl backdrop-blur-md border border-white z-[100] transition-all duration-300 ${
                     openDropdown === title ? "pointer-events-auto" : "pointer-events-none"
                   }`}
                 >
