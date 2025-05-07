@@ -2,6 +2,7 @@ import  { useState } from "react";
 import { Link } from "react-router-dom";
 import {  X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import SpaceParticles from "./Footer/SpaceParticles";
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -171,8 +172,9 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="w-full  top-0 text-white px-6 py-4 z-50 backdrop      bg-gradient-to-b from-black/50 to-transparent backdrop-blur-md"
+      className="w-full  top-0 text-white px-6 py-4 z-50 backdrop bg-black backdrop-blur-md"
     >
+      <SpaceParticles/>
       <div className="flex items-center justify-between px-4 md:px-10 relative w-full">
         {/* Left: Logo and Desktop Nav */}
         <div className="flex items-center space-x-12">
