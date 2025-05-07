@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
               className="space-y-2"
             >
               <div className="inline-block">
-                <span className="bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full">
+                <span className="bg-black text-white text-sm font-medium px-4 py-1 rounded-full">
                   Exploring New Frontiers
                 </span>
               </div>
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-8 flex gap-4"
             >
-              <button className="group relative px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+              <button className="group relative px-6 py-3 bg-white hover:bg-blue-600 text-black rounded-lg font-medium transition-all duration-300 ">
                 Discover Missions
                 <motion.span
                   className="inline-block ml-2"

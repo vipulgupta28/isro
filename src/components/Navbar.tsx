@@ -171,7 +171,7 @@ const Navbar = () => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className="w-full fixed top-0 text-white px-6 py-4 z-50 backdrop      bg-gradient-to-b from-black/50 to-transparent backdrop-blur-md"
+      className="w-full  top-0 text-white px-6 py-4 z-50 backdrop      bg-gradient-to-b from-black/50 to-transparent backdrop-blur-md"
     >
       <div className="flex items-center justify-between px-4 md:px-10 relative w-full">
         {/* Left: Logo and Desktop Nav */}
@@ -193,7 +193,7 @@ const Navbar = () => {
             >
             
             <button
-  className="transition p-2 hover:cursor-pointer rounded-lg font-orbitron text-sm font-medium flex items-center gap-1 hover:text-cyan-300 glow-hover"
+  className="transition p-2 hover:cursor-pointer rounded-lg font-orbitron text-sm font-medium flex items-center gap-1 hover:text-zinc-400"
   onClick={() => toggleDropdown(title)}
 >
   {title}
@@ -235,7 +235,7 @@ const Navbar = () => {
         </div>
 
         {/* Right: Hamburger */}
-        <div>
+        {/* <div>
           <button
             onClick={toggleMenu}
             className="focus:outline-none flex items-center"
@@ -246,7 +246,7 @@ const Navbar = () => {
               <Menu className="w-6 h-6 text-white hover:text-cyan-300 glow-hover transition-transform duration-300" />
             )}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Sidebar with Framer Motion */}

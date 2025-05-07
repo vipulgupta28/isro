@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import History from "../components/history/History";
+import ISRONews from "../components/news";
 
 const LandingPage:React.FC = () =>{
     return(
@@ -8,6 +9,7 @@ const LandingPage:React.FC = () =>{
         <Navbar/>
         <Hero/>
         <History/>
+        <ISRONews/>
         </>
     )
 }
