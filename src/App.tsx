@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-
-
+import SpaceParticles from "./components/Footer/SpaceParticles";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <div className="bg-black text-white ">
+      <div className="relative min-h-screen overflow-hidden">
+        <SpaceParticles />
         <AppRoutes />
       </div>
     </BrowserRouter>

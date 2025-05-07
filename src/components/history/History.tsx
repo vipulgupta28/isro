@@ -38,8 +38,8 @@ const LaunchesSection = () => {
           className="relative group bg-gradient-to-br from-gray-900/90 to-black/90 rounded-2xl p-6 overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] animate-fade-in"
         >
           {/* Orbital ring effect */}
-          <div className="absolute inset-0 rounded-2xl border border-blue-500/20 group-hover:border-blue-500/50 transition-all duration-500">
-            <div className="absolute w-2 h-2 bg-blue-400 rounded-full top-2 left-2 animate-orbit"></div>
+          <div className="absolute inset-0 rounded-2xl border border-white group-hover:border-blue-500/50 transition-all duration-500">
+            <div className="absolute w-2 h-2 bg-white rounded-full top-2 left-2 animate-orbit"></div>
           </div>
           {/* Card content */}
           <div className="relative z-10">
@@ -48,7 +48,7 @@ const LaunchesSection = () => {
               alt={launch.title}
               className="w-full h-56 object-cover rounded-xl mb-5 border border-gray-800/50 group-hover:border-blue-400/30 transition-all duration-300"
             />
-            <h3 className="text-2xl font-semibold text-blue-200 mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-300">
+            <h3 className="text-2xl font-semibold text-white mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-300">
               {launch.title}
             </h3>
             <p className="text-sm text-gray-400 mb-4 font-medium">{launch.date}</p>
@@ -86,7 +86,7 @@ const History = () => {
             <Star className="h-4 w-4 mr-2 text-yellow-300" />
             Pioneering Space Exploration
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-300">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-clip-text text-white">
             ISRO's Cosmic Legacy
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed">
@@ -97,8 +97,8 @@ const History = () => {
 
         {/* Decorative divider */}
         <div className="relative py-16">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-400/60 to-indigo-400/60"></div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center shadow-xl ring-4 ring-blue-500/30">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-white"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-black flex items-center justify-center shadow-xl ring-2 ring-white">
             <Rocket className="h-10 w-10 text-white" />
           </div>
         </div>

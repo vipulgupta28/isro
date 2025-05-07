@@ -34,7 +34,7 @@ const News: React.FC = () => {
     <section className="bg-black py-20 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold tracking-tight mb-2">Latest <span className="text-white">ISRO</span> News</h2>
+          <h2 className="text-5xl font-bold tracking-tight mb-2">Latest <span className="text-white">ISRO</span> News</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Stay updated with the latest breakthroughs and mission updates from the Indian Space Research Organisation.
           </p>

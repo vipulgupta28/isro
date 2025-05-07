@@ -9,13 +9,7 @@ const Hero: React.FC = () => {
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-black" />
-      {/* Animated stars */}
-
-  <div className="stars" />
-  <div className="twinkling" />
-
-
-      {/* Animated stars */}
+  
       <div className="absolute inset-0">
         <div className="stars" />
         <div className="twinkling" />
